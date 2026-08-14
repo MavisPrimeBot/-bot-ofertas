@@ -9,7 +9,7 @@ bot = telebot.TeleBot(TOKEN)
 def start(message):
     bot.reply_to(
         message,
-        "🤖 Olá! Sou seu Bot de Ofertas!\n\n"
+        "🤖 Olá! Sou a Mavis sua Bot de Ofertas!\n\n"
         "Envie o nome de um produto e eu preparo uma oferta para você. 🛍️🔥"
     )
 
