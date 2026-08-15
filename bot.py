@@ -418,79 +418,37 @@ def extrair_dados(url):
 
 def montar_mensagem(dados):
 
-    gatilho = GATILHO
-
-    nome = dados.get(
-        "nome"
-    )
-
-    preco_antigo = dados.get(
-        "preco_antigo"
-    )
-
-    preco = dados.get(
-        "preco"
-    )
-
-    cupom = dados.get(
-        "cupom"
-    )
-
-    link = dados.get(
-        "url"
-    )
-
-    # -----------------------------------------------------
-    # PREÇO
-    # -----------------------------------------------------
+    nome = dados.get("nome")
+    preco_antigo = dados.get("preco_antigo")
+    preco = dados.get("preco")
+    cupom = dados.get("cupom")
+    link = dados.get("url")
 
     if preco_antigo and preco:
-
         linha_preco = (
             f"De: <s>{html.escape(preco_antigo)}</s>\n"
             f"<b>POR: {html.escape(preco)}</b> ✅"
         )
-
     elif preco:
-
         linha_preco = (
             f"<b>POR: {html.escape(preco)}</b> ✅"
         )
-
     else:
-
-        linha_preco = (
-            "💰 <b>Confira o preço no produto</b>"
-        )
-
-    # -----------------------------------------------------
-    # CUPOM
-    # -----------------------------------------------------
+        linha_preco = "💰 Confira o preço no produto"
 
     if cupom:
-
         linha_cupom = (
-            f"🎟️ Use o cupom: "
-            f"<b>{html.escape(cupom)}</b>"
+            f"🎟️ <b>{html.escape(cupom)}</b>"
         )
-
     else:
-
-        linha_cupom = (
-            "🎟️ Consulte os cupons disponíveis"
-        )
-
-    # -----------------------------------------------------
-    # MENSAGEM FINAL
-    # -----------------------------------------------------
+        linha_cupom = "🎟️ Consulte os cupons disponíveis"
 
     mensagem = (
-        f"{html.escape(gatilho)}\n\n"
-        f"<b>{html.escape(nome)}</b>\n\n"
+        f"<b>OFERTA DO DIA</b>⚡️\n\n"
+        f"{html.escape(nome)}\n\n"
         f"{linha_preco}\n\n"
         f"{linha_cupom}\n\n"
-        f"🔗 <b>Compre aqui:</b>\n"
-        f"{html.escape(link)}"
+        f"🔗 Compre aqui: {html.escape(link)}"
     )
 
     return mensagem
