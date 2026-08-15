@@ -28,17 +28,12 @@ logging.basicConfig(
 
 def criar_oferta(link):
     gatilho = "OFERTA DO DIA⚡️"
-    nome = "Shopee Brasil | Ofertas incríveis. Melhores preços do mercado"
-    pa = "Confira o preço no produto"
-    preco = "Confira o preço no produto"
-    cp = "Consulte os cupons disponíveis"
-
     return f"""*{gatilho}*
 
-🛍️ _{nome}_
+ _{nome}_
 
 De: ~{pa}~
-*POOR: {preco}* 🔥🔥
+*POOR: {preco}* ✅
 
 🎟️ *{cp}*
 
