@@ -30,7 +30,7 @@ logging.basicConfig(
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     await update.message.reply_text(
-        "🔥 Bem-vindo ao Mavis Prime!\n\n"
+        "💜Bem-vindo a Mavis Prime Bot!\n\n"
         "Envie um link da Shopee ou Mercado Livre "
         "para gerar sua oferta. 🛍️"
     )
@@ -46,7 +46,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "📌 Como usar o Mavis Prime:\n\n"
         "1️⃣ Copie o link do produto.\n"
         "2️⃣ Envie o link aqui.\n"
-        "3️⃣ O bot prepara a oferta.\n\n"
+        "3️⃣ O bot prepara a oferta com a imagem.\n\n"
         "🛒 Lojas aceitas:\n"
         "• Shopee\n"
         "• Mercado Livre"
@@ -91,7 +91,7 @@ def gerar_oferta(
         f"🎟️ Use o cupom: *{cupom}*\n\n"
         f"🔗 *Compre aqui:*\n"
         f"{link}\n\n"
-        f"🛍️ *{loja}*"
+    
     )
 
     return mensagem
@@ -155,13 +155,6 @@ async def receber_mensagem(
     # pela captura automática dos dados.
     #
 
-    nome = "Nome do produto"
-
-    preco_antigo = "R$ 99,90"
-
-    preco_atual = "R$ 59,90"
-
-    cupom = "CUPOM10"
 
 
     # ======================================
